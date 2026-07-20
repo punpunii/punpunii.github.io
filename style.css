@@ -1,119 +1,243 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-background:#F6F8FC;
-
-font-family:Arial, Helvetica, sans-serif;
-
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
 
+body{
+font-family:'Poppins',sans-serif;
+background:#FFF7FA;
+background-image:
+radial-gradient(circle at top left,#FFD8E8 0%,transparent 28%),
+radial-gradient(circle at bottom right,#DCEEFF 0%,transparent 30%);
+color:#444;
 padding:40px;
-
 }
 
 .container{
-
-max-width:850px;
-
+max-width:950px;
 margin:auto;
+background:rgba(255,255,255,.96);
+backdrop-filter:blur(10px);
+padding:55px;
+border-radius:35px;
+box-shadow:0 20px 50px rgba(255,160,190,.18);
+animation:fade 1s ease;
+}
 
-background:white;
-
-padding:40px;
-
-border-radius:20px;
-
-box-shadow:0px 5px 20px rgba(0,0,0,0.1);
-
-text-align:center;
-
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(25px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 .profile{
-
-width:220px;
-
-height:220px;
-
-border-radius:50%;
-
+width:230px;
+height:230px;
 object-fit:cover;
+display:block;
+margin:auto;
+border-radius:50%;
+padding:7px;
+background:white;
+border:8px solid #FFC6DD;
+box-shadow:0 15px 40px rgba(255,170,200,.45);
+transition:.45s;
+}
 
-border:6px solid #87CEFA;
-
+.profile:hover{
+transform:scale(1.06) rotate(2deg);
 }
 
 h1{
-
-font-size:45px;
-
-margin-top:20px;
-
-color:#222;
-
+font-size:58px;
+text-align:center;
+margin-top:25px;
+font-weight:700;
+background:linear-gradient(90deg,#FF6FA5,#FF9DB8,#FFB3C6);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
 .subtitle{
-
+text-align:center;
+margin-top:10px;
+margin-bottom:45px;
 font-size:20px;
-
-color:#666;
-
-margin-bottom:40px;
-
+color:#888;
 }
 
 section{
+background:#FFFDFE;
+padding:30px;
+margin:30px 0;
+border-radius:25px;
+border:2px solid #FFE3EF;
+box-shadow:0 10px 25px rgba(255,170,200,.12);
+transition:.35s;
+}
 
-margin-top:40px;
-
-text-align:left;
-
+section:hover{
+transform:translateY(-8px) scale(1.01);
+box-shadow:0 18px 35px rgba(255,170,200,.22);
 }
 
 h2{
+display:inline-block;
+padding:10px 22px;
+border-radius:999px;
+font-size:24px;
+margin-bottom:20px;
+font-weight:600;
+}
 
-color:#5B8DEF;
+section:nth-of-type(1) h2{
+background:#FFD7E7;
+color:#D94F88;
+}
 
-border-bottom:2px solid #E5EAF5;
+section:nth-of-type(2) h2{
+background:#DCEEFF;
+color:#4A90E2;
+}
 
-padding-bottom:10px;
+section:nth-of-type(3) h2{
+background:#EEE3FF;
+color:#8365D9;
+}
 
+section:nth-of-type(4) h2{
+background:#FFF1CC;
+color:#D59B00;
+}
+
+section:nth-of-type(5) h2{
+background:#DFF8E8;
+color:#2F9D67;
+}
+
+section:nth-of-type(6) h2{
+background:#FFD7E7;
+color:#D94F88;
 }
 
 p{
-
 font-size:18px;
-
-line-height:1.8;
-
-color:#444;
-
+line-height:1.9;
+margin-top:10px;
 }
 
 ul{
-
-font-size:18px;
-
-line-height:2;
-
+padding-left:22px;
+margin-top:10px;
 }
 
+li{
+line-height:2;
+font-size:18px;
+}
 
 .certificate{
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
-gap:20px;
+gap:25px;
 margin-top:20px;
 }
 
 .certificate img{
-width:220px;
-border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,0.15);
-transition:0.3s;
+width:250px;
+border-radius:18px;
+border:5px solid white;
+box-shadow:0 15px 30px rgba(255,170,200,.25);
+transition:.4s;
 }
 
 .certificate img:hover{
-transform:scale(1.05);
+transform:scale(1.06) rotate(1deg);
+}
+
+a{
+color:#FF6FA5;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
+}
+
+a:hover{
+color:#4A90E2;
+}
+
+button{
+background:linear-gradient(90deg,#FF8DB5,#FFB6C1);
+border:none;
+color:white;
+padding:14px 30px;
+border-radius:40px;
+font-size:16px;
+font-family:'Poppins',sans-serif;
+cursor:pointer;
+transition:.35s;
+box-shadow:0 8px 20px rgba(255,170,200,.3);
+}
+
+button:hover{
+transform:translateY(-3px);
+box-shadow:0 15px 30px rgba(255,170,200,.45);
+}
+
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+background:#FFC6DD;
+border-radius:50px;
+}
+
+::-webkit-scrollbar-track{
+background:#FFF7FA;
+}
+
+@media(max-width:768px){
+
+body{
+padding:20px;
+}
+
+.container{
+padding:28px;
+border-radius:25px;
+}
+
+.profile{
+width:180px;
+height:180px;
+}
+
+h1{
+font-size:40px;
+}
+
+.subtitle{
+font-size:18px;
+}
+
+section{
+padding:22px;
+}
+
+.certificate img{
+width:100%;
+max-width:320px;
+}
+
 }
